@@ -83,7 +83,7 @@ body {
   place-content: center;
   padding: var(--spacing-md);
   color: var(--color-green-900);
-  gap: 2.25rem
+  gap: 88px;
 }
 
 /* Container */
@@ -109,6 +109,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xl);
+  margin: var(--spacing-md) 0;
 }
 
 /* Input Groups */
@@ -324,6 +325,9 @@ body {
     padding: var(--spacing-lg);
   }
   
+  .calculator__input-section {
+    margin: 0;
+  }
   .tip-buttons {
     grid-template-columns: repeat(2, 1fr);
   }
