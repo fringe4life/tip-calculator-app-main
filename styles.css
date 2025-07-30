@@ -155,7 +155,7 @@ body {
   position: absolute;
   left: var(--spacing-md);
   width: 0.75rem; /* 12px */
-  height: 0.75rem; /* 12px */
+  aspect-ratio: 1;
   z-index: 1;
 }
 
@@ -164,7 +164,7 @@ body {
   background-color: var(--color-grey-50);
   border: 2px solid transparent;
   border-radius: var(--border-radius);
-  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 2.5rem; /* 40px left padding for icon */
+  padding: 6px var(--spacing-md); /* 40px left padding for icon */
   font-family: var(--font-family);
   font-size: var(--font-size-input);
   font-weight: 700;
@@ -255,9 +255,8 @@ body {
 }
 
 .result-item__info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem; /* 4px */
+  margin: var(--spacing-sm) 0;
+  display: grid;
 }
 
 .result-item__label {
