@@ -34,6 +34,7 @@
   --spacing-md: 1rem; /* 16px */
   --spacing-lg: 1.5rem; /* 24px */
   --spacing-xl: 2rem; /* 32px */
+  --spacing-2lg: 2.3125rem; /* 36px */
   --spacing-2xl: 2.5rem; /* 40px */
   --spacing-3xl: 3rem; /* 48px */
   
@@ -244,7 +245,7 @@ body {
 /* Results */
 .results {
   display: grid;
-  gap: var(--spacing-md);
+  gap: var(--spacing-2lg) var(--spacing-2xl);
 }
 
 .result-item {
@@ -319,6 +320,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   
+  .results {
+    padding: 0;
+  }
  
 }
 
