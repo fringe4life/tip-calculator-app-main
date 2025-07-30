@@ -113,8 +113,7 @@ body {
 
 /* Input Groups */
 .input-group {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: var(--spacing-sm);
 }
 
@@ -217,7 +216,6 @@ body {
   background-color: var(--color-grey-50);
   color: var(--color-green-900);
   text-align: center;
-  padding: var(--spacing-sm);
 }
 
 .tip-button--custom:focus {
