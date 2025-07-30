@@ -22,6 +22,7 @@
   --font-family: 'Space Mono', monospace;
   --font-size-amount: 3rem;
   --font-size-input: 1.5rem; /* 24px */
+  --font-size-base: 1rem;
   --font-size-label: 0.875rem; /* 14px */
   --font-size-result: 2rem; /* 32px */
   --font-size-result-small: 0.8125rem; /* 13px */
@@ -243,7 +244,7 @@ body {
 /* Results */
 .results {
   display: grid;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-md);
 }
 
 .result-item {
@@ -260,7 +261,7 @@ body {
 
 .result-item__label {
   color: var(--color-white);
-  font-size: var(--font-size-label);
+  font-size: var(--font-size-base);
 }
 
 .result-item__per-person {
