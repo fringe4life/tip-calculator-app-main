@@ -20,6 +20,7 @@
   
   /* Typography */
   --font-family: 'Space Mono', monospace;
+  --font-size-amount: 3rem;
   --font-size-input: 1.5rem; /* 24px */
   --font-size-label: 0.875rem; /* 14px */
   --font-size-result: 2rem; /* 32px */
@@ -269,7 +270,7 @@ body {
 
 .result-item__amount {
   color: var(--color-primary);
-  font-size: var(--font-size-result);
+  font-size: var(--font-size-amount);
   font-weight: 700;
 }
 
@@ -317,12 +318,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .result-item__amount {
-    font-size: 1.75rem; /* 28px */
-  }
+ 
 }
 
-@media (max-width: 23.4375rem) { /* 375px */
+@media (max-width: 26rem) { /* 375px */
   body {
     padding: var(--spacing-sm);
   }
@@ -332,11 +331,11 @@ body {
     gap: var(--spacing-lg);
   }
   
-  .tip-buttons {
+  /* .tip-buttons {
     grid-template-columns: 1fr;
-  }
+  } */
   
   .result-item__amount {
-    font-size: 1.5rem; /* 24px */
+    font-size: var(--font-size-result);
   }
 } 
