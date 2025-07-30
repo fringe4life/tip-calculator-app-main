@@ -279,7 +279,7 @@ body {
   color: var(--color-green-900);
   border: none;
   border-radius: var(--border-radius);
-  padding: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-md);
   font-family: var(--font-family);
   font-size: var(--font-size-input);
   font-weight: 700;
