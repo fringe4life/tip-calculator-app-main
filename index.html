@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <img src="./images/logo.svg" alt="logo" class="logo">
+  <main class="container">
+    <div class="calculator">
+      <div class="calculator__input-section">
+        <div class="input-group">
+          <label for="bill" class="input-group__label">Bill</label>
+          <div class="input-group__input-wrapper">
+            <img src="./images/icon-dollar.svg" alt="" class="input-group__icon">
+            <input type="number" id="bill" class="input-group__input" placeholder="0" min="0" step="0.01">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-group__label">Select Tip %</label>
+          <div class="tip-buttons">
+            <button type="button" class="tip-button" data-tip="5">5%</button>
+            <button type="button" class="tip-button" data-tip="10">10%</button>
+            <button type="button" class="tip-button" data-tip="15">15%</button>
+            <button type="button" class="tip-button" data-tip="25">25%</button>
+            <button type="button" class="tip-button" data-tip="50">50%</button>
+            <input type="number" id="custom-tip" class="tip-button tip-button--custom" placeholder="Custom" min="0" max="100">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-group__label-wrapper">
+            <label for="people" class="input-group__label">Number of People</label>
+            <span class="input-group__error-message" id="people-error">Can't be zero</span>
+          </div>
+          <div class="input-group__input-wrapper">
+            <img src="./images/icon-person.svg" alt="" class="input-group__icon">
+            <input type="number" id="people" class="input-group__input" placeholder="0" min="1" step="1">
+          </div>
+        </div>
+      </div>
+
+      <div class="calculator__results-section">
+        <div class="results">
+          <div class="result-item">
+            <div class="result-item__info">
+              <span class="result-item__label">Tip Amount</span>
+              <span class="result-item__per-person">/ person</span>
+            </div>
+            <span class="result-item__amount" id="tip-amount">$0.00</span>
+          </div>
+          
+          <div class="result-item">
+            <div class="result-item__info">
+              <span class="result-item__label">Total</span>
+              <span class="result-item__per-person">/ person</span>
+            </div>
+            <span class="result-item__amount" id="total-amount">$0.00</span>
+          </div>
+        </div>
+        
+        <button type="button" class="reset-button" id="reset-button" disabled>Reset</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
