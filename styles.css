@@ -26,6 +26,7 @@
   --font-size-result-small: 0.8125rem; /* 13px */
   
   /* Spacing */
+  --spacing-xxs: 0.375rem; /* 6px */
   --spacing-xs: 0.5rem; /* 8px */
   --spacing-sm: 0.75rem; /* 12px */
   --spacing-md: 1rem; /* 16px */
@@ -194,7 +195,7 @@ body {
   color: var(--color-white);
   border: none;
   border-radius: var(--border-radius);
-  padding: var(--spacing-sm);
+  padding: var(--spacing-xxs) var(--spacing-md);
   font-family: var(--font-family);
   font-size: var(--font-size-input);
   font-weight: 700;
