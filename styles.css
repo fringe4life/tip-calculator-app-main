@@ -108,7 +108,7 @@ body {
 .calculator__input-section {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-2xl);
   margin: var(--spacing-md) 0;
 }
 
