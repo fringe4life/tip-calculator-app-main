@@ -82,7 +82,6 @@ body {
   display: grid;
   justify-items: center;
   place-content: center;
-  padding: var(--spacing-md);
   color: var(--color-green-900);
   gap: 88px;
 }
@@ -188,7 +187,7 @@ body {
 .tip-buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
 }
 
 .tip-button {
