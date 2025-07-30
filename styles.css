@@ -83,7 +83,7 @@ body {
   justify-items: center;
   place-content: center;
   color: var(--color-green-900);
-  gap: 88px;
+  gap: 80px;
 }
 
 /* Container */
