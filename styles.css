@@ -6,8 +6,11 @@
 }
 
 input,
-button {
+button, 
+label {
   cursor: pointer;
+  font-weight: inherit;
+  font-family: inherit;
 }
 
 button {
@@ -48,6 +51,7 @@ button {
   --spacing-3xl: 3rem; /* 48px */
   --spacing-4xl: 4.25rem; /* 68px */
   --spacing-5xl: 5rem; /* 80px */
+  --spacing-10xl: 10.125rem;
   
   /* Border radius */
   --border-radius: 0.3125rem; /* 5px */
@@ -94,10 +98,19 @@ body {
   background-color: var(--color-grey-200);
   min-height: 100dvh;
   display: grid;
-  justify-items: center;
-  place-content: center;
+  margin-inline: auto;
   color: var(--color-green-900);
   gap: var(--spacing-4xl);
+  grid-template-rows: 3.375rem 1fr;
+  margin-block-start: var(--spacing-10xl);
+  place-content: center;
+}
+
+.logo {
+  justify-self: center;
+  
+  inline-size: 86px;
+  aspect-ratio: 43 / 27;
 }
 
 /* Calculator */
@@ -106,7 +119,7 @@ body {
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-xl) var(--spacing-2xl);
   display: grid;
-  grid-template-columns: repeat(2, minmax(380px, 1fr));
+  grid-template-columns: repeat(2, 23.75rem);
   gap: var(--spacing-3xl);
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
 }
@@ -133,9 +146,7 @@ body {
 
 /* Shared font styles for form elements */
 .form-font {
-  font-family: var(--font-family);
   font-size: var(--font-size-input);
-  font-weight: 700;
 }
 
 .rounded {
@@ -146,13 +157,12 @@ body {
 .label {
   font-size: var(--font-size-label);
   color: var(--color-grey-500);
-  font-weight: 700;
 }
 
 .error-message {
   font-size: var(--font-size-label);
   color: var(--color-error);
-  font-weight: 700;
+  font-weight: inherit;
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -179,7 +189,7 @@ body {
   inline-size: 100%;
   background-color: var(--color-grey-50);
   border: 2px solid transparent;
-  padding-block: 6px;
+  padding-block: var(--spacing-xs);
   padding-inline: var(--spacing-md); /* 40px left padding for icon */
   color: var(--color-green-900);
   text-align: right;
@@ -281,7 +291,6 @@ body {
 .result-amount {
   color: var(--color-green-400);
   font-size: var(--font-size-amount);
-  font-weight: 700;
 }
 
 /* Reset Button */
@@ -306,9 +315,15 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 48rem) { /* 768px */
+@media (max-width: 64rem) { /* 768px */
+
+  body {
+    margin-block-start: var(--spacing-3xl);
+    margin-inline: var(--spacing-5xl);
+    place-content: revert;
+  }
   .calculator {
-    grid-template-columns: minmax(min(608px, 100%), 1fr);
+    grid-template-columns: min(38rem, 100%);
     gap: var(--spacing-xl);
     padding: var(--spacing-3xl) var(--spacing-5xl);
   }
@@ -322,9 +337,10 @@ body {
   }
 }
 
-@media (max-width: 27.5rem) { /* 375px */
+@media (max-width: 38rem) { /* 375px */
   body {
     padding: 0;
+    margin-inline: 0;
   }
   
   .calculator {
